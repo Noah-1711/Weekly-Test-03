@@ -1,25 +1,27 @@
 import React from 'react'
 import { Button } from '../Button';
 import './Rating.css'
+
+const getIosPrefix = () => {
+    return (
+      <img
+        src="https://web-images.credcdn.in/_next/assets/images/home-page/apple-store-logo.png"
+        className="app-rating-icon" alt=""
+      />
+    );
+  };
+  
+  const getAndroidPrefix = () => {
+    return (
+      <img
+        src="https://web-images.credcdn.in/_next/assets/images/home-page/play-store-logo.png"
+        className="app-rating-icon"
+      />
+    );
+  };
  
 export const Rating = () => {
-    const getIosPrefix = () => {
-        return (
-          <img
-            src="https://web-images.credcdn.in/_next/assets/images/home-page/apple-store-logo.png"
-            className="app-rating-icon"
-          />
-        );
-      };
-      
-      const getAndroidPrefix = () => {
-        return (
-          <img
-            src="https://web-images.credcdn.in/_next/assets/images/home-page/play-store-logo.png"
-            className="app-rating-icon"
-          />
-        );
-      };
+   
   return (
     <div className="app-rating ">
     <div className="app-rating-block ">
@@ -36,7 +38,7 @@ export const Rating = () => {
    
       <div className="non-mobile">
         <Button
-          prefix={getIosPrefix()}
+          prefix={getIosPrefix}
           buttonText="Download the app"
           customClass="app-rating-button"
         />
@@ -56,7 +58,7 @@ export const Rating = () => {
    
       <div className="non-mobile">
         <Button
-          prefix={getAndroidPrefix()}
+          prefix={getAndroidPrefix}
           buttonText="Download the app"
           customClass="app-rating-button"
         />

@@ -48,6 +48,11 @@ z-index: 20;
     line-height: 55px;
     padding-left: 16px;
     font-weight: 700;
+
+  }
+  .non-mobile{
+    margin: 1rem;
+
   }
   
  
